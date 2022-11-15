@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Check box</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-12">	
+<input type="checkbox" value="Cricket"/>Cricket
+<input type="checkbox" value="Tennis"/>Tennis
+<input type="checkbox" value="Golf"/>Golf
+<input type="checkbox" value="Hockey"/>Hockey
+<input type="submit" id="btnsubmit" value="choose" class="btn btn-primary">
+<div id="display"></div>
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function(e){
+   $('#btnsubmit').click(function(e){
+    var res = $("input[type='checkbox']:checked");
+    if(res.length>0)
+    {
+
+    var op ="<b>"+res.length+"         -->checked hae <br/></b>";
+     res.each(function(index,element){
+     op +=$(this).val()+"</br>";
+     });
+     $("#display").html(op);
+     
+}
+
+else
+
+{
+
+    $("#display").html("no checkbox is checked");	
+}
+
+
+
+});
+
+});
+
+</script>
+
+
+
+
+</body>
+</html>

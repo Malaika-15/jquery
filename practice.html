@@ -1,0 +1,85 @@
+<!DOCT
+<TYPE html>
+<html>
+<head>
+<title>Function</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+  <h1>User Define Function Declaration</h1>
+  <button class="btn btn-info btn_greet">Greeting</button>
+  <button class="btn btn-info btn_news">News</button>
+  <button class="btn btn-info btn_show">Read More</button>
+  <p class="text-justify" style="visibility: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+
+
+  </div>
+</div>
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+//user define function
+
+$.fn.birthday = function ()
+{
+                          
+
+alert("Happy Birthday to you many many happy returns of the day");
+$("h1").css("color","purple");
+
+}
+
+$.fn.news=function()
+{
+
+alert("Today weather is hot");
+}
+
+$.fn.mypara =function ()
+{
+
+    $("p").css("visibility","visible");
+
+}
+
+
+
+//----------------------------------------calling
+
+$(".btn_greet").click(function(e){
+   $.fn.birthday();//function calling
+
+});
+
+$("btn_news").click(function(e){
+  $.fn.news();//function calling
+
+});
+
+
+$("btn_show").click(function(e){
+  $.fn.show();//function calling
+
+});
+
+});
+
+
+</script>
+
+
+</body>
+</html>
+
+
+

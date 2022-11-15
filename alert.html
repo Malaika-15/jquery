@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+</head>
+
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">	
+<table class="table table-bordered">
+ 
+ <tr>
+ 	<th>Id</th>
+ 	<th>Name<thd>
+ 	<th>Subject</th>
+    <th>Marks</th>
+</tr>
+<tr>
+
+	<td>001</td>
+	<td>Malaika</td>
+    <td>java</td>
+    <td>40</td>
+</tr>
+<tr>
+     <td>001</td>
+     <td>Malaika</td>
+     <td>Java</td>
+     <td>40</td>
+</tr>
+<table>
+<p></p>
+</div>
+</div>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+$(document).ready(function(e){
+
+alert($('td').length);
+
+var output ="Table heading length is"+$('th').length+"Table data length is" +$('td').length;
+
+$('p').text (output)
+
+});
+
+</script>
+
+
+</body>
+</html>
